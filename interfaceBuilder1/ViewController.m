@@ -26,4 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)switchOnoff:(UISwitch *)sender {
+  if (sender.on == YES) {
+    self.view.backgroundColor = [UIColor greenColor];
+  } else {
+    self.view.backgroundColor = [UIColor whiteColor];
+  }
+}
+
 @end
