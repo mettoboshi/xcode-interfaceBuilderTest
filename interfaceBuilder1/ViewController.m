@@ -14,6 +14,12 @@
 - (IBAction)updateValue:(id)sender;
 - (IBAction)mySlider2:(UISlider *)sender;
 
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *colorNames;
+
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+- (IBAction)touchWordButton:(UIButton *)sender;
+
+
 @end
 
 @implementation ViewController
@@ -41,6 +47,10 @@
   _myTextField.text = @"なるほど";
   _myTextField.textColor = [UIColor greenColor];
   
+  
+  for (UITextField* fid in _colorNames) {
+    fid.placeholder = @"placeholder";
+  }
   
 }
 
@@ -77,5 +87,27 @@
 
 - (IBAction)mySlider2:(UISlider *)sender {
   NSLog(@"%.1f %%", sender.value * 100);
+  _myTextField.text = [NSString stringWithFormat:@"%.1f", sender.value * 100];
+}
+- (IBAction)touchWordButton:(UIButton *)sender {
+
+  NSString *word;
+  switch (sender.tag) {
+    case 1:
+      word = [NSString stringWithFormat:@"1 desu"];
+      break;
+    case 2:
+      word = [NSString stringWithFormat:@"2 desu"];
+      break;
+    case 3:
+      word = [NSString stringWithFormat:@"3 desu"];
+      break;
+      
+    default:
+      break;
+  }
+  
+  _wordLabel.text = word;
+  
 }
 @end
