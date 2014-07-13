@@ -24,8 +24,15 @@
   
   NSDate *theTime = [[NSDate alloc] initWithTimeIntervalSinceNow:30];
   NSLog(@"date : %@", theTime);
+
+  NSString *name = [self fullName:@"sei" lastName:@"mei"];
+  NSLog(@"%@", name);
   
-  
+  [self countUp];
+  [self countUp];
+  [self countUp];
+
+  NSLog(@"%d", _counter);
   
 }
 
@@ -35,7 +42,8 @@
   // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)switchOnoff:(UISwitch *)sender {
+- (IBAction)switchOnoff:(UISwitch *)sender
+{
   if (sender.on == YES) {
     self.view.backgroundColor = [UIColor greenColor];
   } else {
@@ -44,4 +52,15 @@
 
 }
 
+- (NSString *) fullName: (NSString *)sei lastName: (NSString *) mei
+{
+  NSString *sei_mei = [NSString stringWithFormat:@"%@ %@", sei, mei];
+  return sei_mei;
+}
+
+- (void) countUp
+{
+  _counter++;
+}
+  
 @end

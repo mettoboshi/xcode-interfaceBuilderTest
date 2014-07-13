@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
-//property 
+//property
+@property (assign) NSInteger counter;
+
+//method
+- (NSString *) fullName: (NSString *)sei lastName: (NSString *) mei;
+- (void) countUp;
 
 @end
