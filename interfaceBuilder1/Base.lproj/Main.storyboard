@@ -33,7 +33,14 @@
                                 <rect key="frame" x="101" y="191" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="updateValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="WQo-mm-VG9"/>
+                                    <action selector="updateValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="6qq-59-AO3"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UWz-BC-rmK">
+                                <rect key="frame" x="101" y="238" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="mySlider2:" destination="vXZ-lx-hvc" eventType="valueChanged" id="7fe-90-yk2"/>
                                 </connections>
                             </slider>
                         </subviews>

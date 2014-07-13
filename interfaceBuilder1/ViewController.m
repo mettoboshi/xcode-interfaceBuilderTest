@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property (weak, nonatomic) IBOutlet UISlider *mySlider;
 - (IBAction)updateValue:(id)sender;
+- (IBAction)mySlider2:(UISlider *)sender;
 
 @end
 
@@ -72,5 +73,9 @@
   
 - (IBAction)updateValue:(id)sender {
   NSLog(@"%.1f %%", _mySlider.value * 100);
+}
+
+- (IBAction)mySlider2:(UISlider *)sender {
+  NSLog(@"%.1f %%", sender.value * 100);
 }
 @end
