@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
+@property (weak, nonatomic) IBOutlet UISlider *mySlider;
+- (IBAction)updateValue:(id)sender;
 
 @end
 
@@ -68,4 +70,7 @@
   _counter++;
 }
   
+- (IBAction)updateValue:(id)sender {
+  NSLog(@"%.1f %%", _mySlider.value * 100);
+}
 @end

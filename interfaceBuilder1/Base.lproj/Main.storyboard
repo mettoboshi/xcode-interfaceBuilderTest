@@ -29,10 +29,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D9h-Sr-FPb">
+                                <rect key="frame" x="101" y="191" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="updateValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="WQo-mm-VG9"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="mySlider" destination="D9h-Sr-FPb" id="BqZ-fg-dtb"/>
                         <outlet property="myTextField" destination="ZnW-KO-K3G" id="EKK-Hb-mOM"/>
                     </connections>
                 </viewController>
