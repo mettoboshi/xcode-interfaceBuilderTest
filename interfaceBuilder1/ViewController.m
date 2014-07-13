@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
 
 @end
 
@@ -33,6 +34,10 @@
   [self countUp];
 
   NSLog(@"%d", _counter);
+  
+  _myTextField.text = @"なるほど";
+  _myTextField.textColor = [UIColor greenColor];
+  
   
 }
 
