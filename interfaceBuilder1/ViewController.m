@@ -22,6 +22,9 @@
   NSDate *theDate = [[NSDate alloc] init];
   NSLog(@"date : %@", theDate);
   
+  NSDate *theTime = [[NSDate alloc] initWithTimeIntervalSinceNow:30];
+  NSLog(@"date : %@", theTime);
+  
 }
 
 - (void)didReceiveMemoryWarning
